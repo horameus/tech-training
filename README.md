@@ -1,2 +1,2 @@
 # tech-training
-Technical trainings
+Technical trainings, here's the first commit
