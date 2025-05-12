@@ -15,9 +15,9 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "npm run vitest",
-    "dev": "npm run dev",
-    "build": "npm run build"
+    "test": "vitest",
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
     "@types/node": "^22.15.17",
