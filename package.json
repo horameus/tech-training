@@ -1,0 +1,41 @@
+{
+  "name": "tech-training",
+  "version": "1.0.0",
+  "description": "Technical trainings",
+  "homepage": "https://github.com/horameus/tech-training#readme",
+  "bugs": {
+    "url": "https://github.com/horameus/tech-training/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/horameus/tech-training.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run vitest",
+    "dev": "npm run dev",
+    "build": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "@types/react": "^19.1.3",
+    "@types/react-dom": "^19.1.4",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "prettier": "^3.5.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.0",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.3"
+  }
+}
