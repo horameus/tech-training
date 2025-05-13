@@ -9,7 +9,7 @@ export interface ThemeProviderProps extends PropsWithChildren {}
 
 const ThemeContext = createContext<ThemeProviderType | undefined>(undefined);
 
-export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+export function ThemeProvider({ children }: ThemeProviderProps) {
     const [theme, setTheme] = useState('light');
 
     const toggleTheme = () => {
@@ -21,6 +21,6 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
             <div className={`theme-${theme}`}>{children}</div>
         </ThemeContext.Provider>
     );
-};
+}
 
 export const useTheme = () => useContext(ThemeContext);
