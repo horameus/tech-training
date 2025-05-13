@@ -24,3 +24,28 @@ export function evenOddMediumAlt(numArray) {
         { even: 0, odd: 0 },
     );
 }
+
+export function evenOddHard(numArray) {
+    let longest = [];
+    let current = [numArray[0]];
+
+    for (let i = 1; i < numArray.length; i++) {
+        let curr = numArray[i];
+        let prev = numArray[i - 1];
+
+        if ((prev % 2 === 0 && curr % 2 !== 0) || (prev % 2 !== 0 && curr % 2 === 0)) {
+            current.push(curr);
+        } else {
+            if (current.length > longest.length) {
+                longest = current;
+            }
+            current = [curr];
+        }
+    }
+
+    if (current.length > longest.length) {
+        longest = current;
+    }
+
+    return longest;
+}
