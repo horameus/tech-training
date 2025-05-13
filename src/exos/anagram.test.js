@@ -1,18 +1,37 @@
 import { expect, test } from 'vitest';
-import { anagramEasy } from './anagram.js';
+import { anagramEasy, anagramMedium } from './anagram.js';
+
+const strArrayTrue = ['hEllo', 'OlLeh'];
+const strArrayFalse = ['hEllo', 'BonJre'];
 
 test('anagramEasy is true', () => {
-    expect(anagramEasy('hello', 'olleh')).toBe(true);
+    expect(anagramEasy(strArrayTrue)).toBe(true);
 });
 
 test('anagramEasy is false', () => {
-    expect(anagramEasy('hello', 'kerjgkerjg')).toBe(false);
+    expect(anagramEasy(strArrayFalse)).toBe(false);
 });
 
-test('anagramEasy is true, with CAPITALS', () => {
-    expect(anagramEasy('heLlO', 'olleH')).toBe(true);
-});
+const strToFind = 'listen';
+const strArray = [
+    'silent', // anagram
+    'enlist', // anagram
+    'google', // not anagram
+    'tinsel', // anagram
+    'banana', // not anagram
+    'inlets', // anagram
+    'orange', // not anagram
+    'stone', // not anagram
+    'islet', // not anagram
+    'netsil', // anagram
+];
 
-test('anagramEasy is false, with CAPITALS', () => {
-    expect(anagramEasy('heLlO', 'BaaaBBDJD')).toBe(false);
+test('find all anagram, and keep them in the array', () => {
+    expect(anagramMedium(strToFind, strArray)).toStrictEqual([
+        'silent',
+        'enlist',
+        'tinsel',
+        'inlets',
+        'netsil',
+    ]);
 });
