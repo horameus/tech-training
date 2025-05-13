@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { anagramEasy, anagramMedium } from './anagram.js';
+import { anagramEasy, anagramHard, anagramMedium } from './anagram.js';
 
 const strArrayTrue = ['hEllo', 'OlLeh'];
 const strArrayFalse = ['hEllo', 'BonJre'];
@@ -33,5 +33,21 @@ test('find all anagram, and keep them in the array', () => {
         'tinsel',
         'inlets',
         'netsil',
+    ]);
+});
+
+const strArrayHard = ['tones', 'listen', 'silent', 'race', 'acre', 'enlist', 'stone', 'onest', 'care'];
+
+test('find all anagram, and keep them in the array, grouped', () => {
+    expect(anagramHard(strArrayHard)).toStrictEqual([
+        'tones',
+        'stone',
+        'onest',
+        'listen',
+        'silent',
+        'enlist',
+        'race',
+        'acre',
+        'care',
     ]);
 });
