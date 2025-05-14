@@ -1,13 +1,13 @@
 import React, { createContext, useState, useContext, PropsWithChildren } from 'react';
 
-export interface ThemeProviderType {
+export type ThemeProviderTypes = {
     theme: string;
     toggleTheme: () => void;
-}
+};
 
 export interface ThemeProviderProps extends PropsWithChildren {}
 
-const ThemeContext = createContext<ThemeProviderType | undefined>(undefined);
+const ThemeContext = createContext<ThemeProviderTypes | undefined>(undefined);
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
     const [theme, setTheme] = useState('light');
