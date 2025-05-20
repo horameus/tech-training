@@ -15,6 +15,7 @@ export function useResizeObserver() {
         });
 
         observer.observe(document.body);
+
         return () => {
             observer.disconnect();
         };
