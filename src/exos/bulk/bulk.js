@@ -47,3 +47,23 @@ export function isIsogramAlt(str) {
 
     return true;
 }
+
+// Task: Given a sentence, return a new sentence with each word reversed, but word order preserved.
+export function reverseWords(sentence) {
+    const words = sentence.split(' ');
+    const reformed = [];
+
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i].split('').toReversed().join('');
+        reformed.push(word);
+    }
+
+    return reformed.join(' ');
+}
+
+export function reverseWordsAlt(sentence) {
+    return sentence
+        .split(' ')
+        .map(word => word.split('').toReversed().join(''))
+        .join(' ');
+}
