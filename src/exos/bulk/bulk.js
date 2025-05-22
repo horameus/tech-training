@@ -67,3 +67,18 @@ export function reverseWordsAlt(sentence) {
         .map(word => word.split('').toReversed().join(''))
         .join(' ');
 }
+
+// Task: Given two numbers, return true if they have the same frequency of digits.
+export function sameDigitFrequency(num1, num2) {
+    const arr1 = num1.toString().split('').sort().join('');
+    const arr2 = num2.toString().split('').sort().join('');
+    return arr1 === arr2;
+}
+
+// Task: Capitalize the first letter of each word in a sentence.
+export function capitalizeWords(sentence) {
+    return sentence
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
