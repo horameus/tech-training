@@ -82,3 +82,32 @@ export function capitalizeWords(sentence) {
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
 }
+
+// Task: Given an array of numbers, return a new array with duplicates removed. Keep the original order.
+export function removeDuplicates(arr) {
+    const list = new Set();
+
+    for (const digit of arr) {
+        if (!list.has(digit)) list.add(digit);
+    }
+
+    return [...list];
+}
+
+export function removeDuplicatesAlt(arr) {
+    // Set already delete duplicates
+    return [...new Set(arr)];
+}
+
+// Task: Given an array and a value, return how many times the value appears in the array.
+export function countOccurrences(arr, val) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === val) count++;
+    }
+    return count;
+}
+
+export function countOccurrencesAlt(arr, val) {
+    return arr.reduce((acc, curr) => (curr === val ? acc + 1 : acc), 0);
+}

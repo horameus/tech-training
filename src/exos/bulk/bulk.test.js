@@ -1,8 +1,11 @@
 import { expect, test } from 'vitest';
 import {
     capitalizeWords,
+    countOccurrences,
     countVowels,
     isIsogram,
+    removeDuplicates,
+    removeDuplicatesAlt,
     reverseWords,
     reverseWordsAlt,
     sameDigitFrequency,
@@ -26,4 +29,12 @@ test('sameFrequency', () => {
 
 test('Capitalize words', () => {
     console.log(capitalizeWords('machine des iles et de la destruction'));
+});
+
+test('remove duplicate', () => {
+    console.log(removeDuplicatesAlt([1, 2, 5, 6, 9, 65, 9, 1, 1, 2, 9, 5, 5]));
+});
+
+test('Count occurence', () => {
+    console.log(countOccurrences([1, 2, 5, 6, 9, 65, 9, 1, 1, 2, 9, 5, 5], 5));
 });
